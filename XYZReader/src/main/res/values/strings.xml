@@ -8,5 +8,7 @@
     <string name="action_share">Share</string>
 
     <string name="up">Up</string>
+    <string name="app_logo">app logo</string>
+    <string name="item_image">Selected item image</string>
 
 </resources>

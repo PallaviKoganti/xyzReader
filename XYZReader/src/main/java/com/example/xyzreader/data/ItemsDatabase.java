@@ -16,7 +16,7 @@ public class ItemsDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + Tables.ITEMS + " ("
+        db.execSQL("CREATE TABLE " + ItemsProvider.Tables.ITEMS + " ("
                 + ItemsContract.ItemsColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + ItemsContract.ItemsColumns.SERVER_ID + " TEXT,"
                 + ItemsContract.ItemsColumns.TITLE + " TEXT NOT NULL,"
@@ -31,7 +31,7 @@ public class ItemsDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + Tables.ITEMS);
+        db.execSQL("DROP TABLE IF EXISTS " + ItemsProvider.Tables.ITEMS);
         onCreate(db);
     }
 }
